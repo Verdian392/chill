@@ -1,10 +1,10 @@
 class Guardian {
-    constructor(guardianName, baseCPS, baseCost, buttonId) {
+    constructor(guardianName, baseCPS, baseCost) {
         this.guardianName = guardianName;
         this.baseCPS = baseCPS / (1000 / tickRate);
         this.baseCost = baseCost;
         this.cost = baseCost;
-        this.buttonId = buttonId;
+        this.buttonId = "buy" + guardianName;
         this.amountOwned = 0;
         this.cps = 0;
         this.visible = false; 
