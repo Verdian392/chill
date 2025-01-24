@@ -1,20 +1,25 @@
 const tickRate = 1000 / 30; 
+let clickStrength = 1;
 let score = 0;
 
-let nettspendnugget = new Guardian("NettspendNugget", 0.1, 15);
-function incScore() {
-    score += nettspendnugget.cps;
-}
-let troll = new Guardian("TrollFace", 1, 100);
-function incScore() {
-    score += troll.cps;
-}
+let nettspendnugget = new Guardian("Nettspend Nugget", 0.1, 15);
+let troll = new Guardian("Troll Face", 1, 100);
+
+let flowers1 = new Flowers("Flowers", 1);
+
 function scorePlusPlus() {
-    score++;
+    score += clickStrength;
+}
+
+function incScore() {
+    score += nettspendnugget.cps
+    score += troll.cps
 }
 function updateButtons() {
     nettspendnugget.buttonState();
     troll.buttonState();
+
+    flowers1.buttonState();
 }
 function updatePage() {
     incScore();
