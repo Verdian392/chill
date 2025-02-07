@@ -1,5 +1,5 @@
 class Guardian {
-    constructor(guardianName, baseCPS, baseCost) {
+    constructor(guardianName, baseCPS, baseCost, buttonLabel) {
         this.guardianName = guardianName;
         this.baseCPS = baseCPS / (1000 / tickRate);
         this.baseCost = baseCost;
@@ -9,7 +9,8 @@ class Guardian {
         this.doubleUpgrade = 1;
         this.cps = 0;
         this.visible = false; 
-    
+        this.buttonLabel = buttonLabel;
+
     }
     purchase(){
         score -= this.cost;
@@ -47,7 +48,7 @@ class Guardian {
         "]";
     }
 
-   /* exception() {
+    buttonStateOG() {
         if (!this.visible) {
             document.getElementById(this.buttonId).style.display = "none";
             if (score >= this.baseCost) {
@@ -62,7 +63,7 @@ class Guardian {
         }
         document.getElementById(this.buttonId).innerHTML =
         "Buy " +
-        this.name + 
+        this.buttonLabel +
         " (Cost: $" + 
         Math.ceil(this.cost).toLocaleString() + 
         ") <br> Adds $" + 
@@ -70,5 +71,5 @@ class Guardian {
         " Per second <br> [Owned: " + 
         this.amountOwned + 
         "]";
-    }  */
+    }  
 }

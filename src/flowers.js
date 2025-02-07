@@ -1,6 +1,6 @@
 class Flowers extends Upgrade {
-    constructor(upgradeName, cost, guardian) {
-        super(upgradeName, cost);
+    constructor(upgradeName, cost, buttonLabel, guardian) {
+        super(upgradeName, cost, buttonLabel);
         this.guardian = guardian;
     }
 

@@ -1,9 +1,9 @@
 class Upgrade {
-    constructor(upgradeName, cost){
+    constructor(upgradeName, cost, buttonLabel) {
     this.upgradeName = upgradeName;
     this.cost = cost;
     this.buttonId = "buy" + upgradeName.replace(/\s/g, ""); 
-   this.buttonClass = "excused"
+    this.buttonLabel = buttonLabel;
 }
 
 purchase(){
@@ -34,7 +34,7 @@ buttonState() {
     Math.ceil(this.cost).toLocaleString() + 
     ")";
 }
-/* exception(){
+ buttonStateOG(){
     if (this.owned) {
         document.getElementById(this.buttonId).style.display = "none";
     }
@@ -51,11 +51,10 @@ buttonState() {
         document.getElementById(this.buttonId).disabled = false;
     }
     document.getElementById(this.buttonId).innerHTML =
-    "Buy " +
-     +
+    "Buy " + this.buttonLabel +
     " (Cost: $" +
     Math.ceil(this.cost).toLocaleString() + 
     ")";
-  } */
+  } 
   
 }

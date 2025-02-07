@@ -5,7 +5,7 @@ let score = 0;
 let nettspendnugget = new Guardian("Nettspend Nugget", 0.1, 15);
 let troll = new Guardian("Troll Face", 1, 100);
 
-let flowers1 = new Flowers("Flowers", 1);
+let flowers1 = new Flowers("Flowers", 1, "luh calm fit n' some flowers with every click.");
 
 function scorePlusPlus() {
     score += clickStrength;
@@ -19,7 +19,7 @@ function updateButtons() {
     nettspendnugget.buttonState();
     troll.buttonState();
 
-    flowers1.buttonState();
+    flowers1.buttonStateOG();
 }
 function updatePage() {
     incScore();
